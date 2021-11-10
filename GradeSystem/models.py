@@ -5,6 +5,7 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import AbstractUser
 
+
 ## User
 user_type = [
     ("Student", "Student"),
@@ -30,7 +31,7 @@ class Course(models.Model):
     courseName = models.CharField(max_length=30)
     courseType = models.CharField(max_length=30)
     courseCredit = models.IntegerField(max_length=30)
-    courseDescription = models.CharField(max_length=30)
+    courseDescription = models.CharField(max_length=300)
     instructor = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
 
