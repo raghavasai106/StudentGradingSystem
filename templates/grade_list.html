@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Grade Update{% endblock title %}
+
+{% block content %}
+    {% if user.user_type != 'Student' %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                            <a class="btn btn-success btn-lg" href="{% url 'grade_create' %}" role="button">Add Grades</a>
+
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+            <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-dark">
+                <thead>
+                <tr>
+                    <th scope="col">Grade Given</th>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Student</th>
+                        {% if user.user_type != 'Student' %}
+                            <th scope="col">Action</th>
+{% endif %}
+                </tr>
+                </thead>
+                <tbody>
+    {% for grade in grades %}
+
+                    <tr>
+
+                        <th scope="row">{{ grade.gradeGiven }}</th>
+                        <th scope="row">{{ grade.courseName }}</th>
+                        <td>{{ grade.student }}</td>
+
+                        {% if user.user_type != 'Student' %}
+
+                        <td>
+
+                            <a type="button" class="btn btn-success" href="{% url 'grade_edit' grade.pk %}">Edit<i
+                                    class="fas fa-pencil" aria-hidden="true"></i></a>
+                             <a type="button" class="btn btn-danger" href="{% url 'grade_delete' grade.pk %}">Delete<i
+                                    class="fas fa-pencil" aria-hidden="true"></i></a>
+
+                        </td>
+                    {% endif %}
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock content %}
