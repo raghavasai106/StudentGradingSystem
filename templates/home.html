@@ -7,7 +7,12 @@
   <h1 class="display-4">Grades Management System</h1>
   <p class="lead">All the students can view their grades</p>
   <p class="lead">
+          {% if user.is_authenticated %}
+
             <a class="btn btn-success btn-lg" href="{% url 'grade_list' %}" role="button">View Grades</a>
+      {% else %}
+      <label class="button btn-success">Welcome, please login</label>
+      {% endif %}
 
   </p>
 </div>
