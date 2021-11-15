@@ -1,5 +1,5 @@
 # StudentGradingSystem 
-install python 3 and open in an IDE.
+install python 3 and open in an IDE, I have used PyCharm Pro.
 # Install requirements file containing Django and forms 
 python install -r requirements.txt
 # Run the application 
