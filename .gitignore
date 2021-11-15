@@ -1,7 +1,6 @@
-*.pyc
-*~
-__pycache__
 venv
+*.pyc
+__pycache__
+local_settings.py
+.idea
 db.sqlite3
-/static
-.DS_Store
