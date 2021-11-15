@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_course</OriginalElement>
+  <nodes>
+    <node x="924.9358974358975" y="536.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.auth_permission</node>
+    <node x="89.5" y="514.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_course</node>
+    <node x="1053.25" y="765.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.auth_group_permissions</node>
+    <node x="699.0" y="765.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser_groups</node>
+    <node x="42.0" y="754.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_grade</node>
+    <node x="669.0" y="921.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.sqlite_sequence</node>
+    <node x="835.8108974358975" y="165.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.django_content_type</node>
+    <node x="365.0480769230769" y="0.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser</node>
+    <node x="195.0" y="921.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.django_migrations</node>
+    <node x="267.0" y="765.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser_user_permissions</node>
+    <node x="0.0" y="921.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.sqlite_master</node>
+    <node x="1134.9358974358975" y="558.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.auth_group</node>
+    <node x="683.9358974358975" y="492.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.django_admin_log</node>
+    <node x="431.0" y="921.0">28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.django_session</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser_groups" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser" relationship="REFERENCES">
+      <point x="-80.5" y="-50.0" />
+      <point x="779.5" y="723.0" />
+      <point x="673.4358974358975" y="723.0" />
+      <point x="673.4358974358975" y="471.0" />
+      <point x="597.7339743589744" y="471.0" />
+      <point x="597.7339743589744" y="451.0" />
+      <point x="524.4230769230769" y="451.0" />
+      <point x="31.875" y="215.0" />
+    </edge>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser_user_permissions" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.auth_permission" relationship="REFERENCES">
+      <point x="103.0" y="-50.0" />
+      <point x="576.0" y="733.0" />
+      <point x="1019.9358974358975" y="733.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_grade" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser" relationship="REFERENCES">
+      <point x="-51.25" y="-61.0" />
+      <point x="93.25" y="733.0" />
+      <point x="79.0" y="733.0" />
+      <point x="79.0" y="461.0" />
+      <point x="396.9230769230769" y="461.0" />
+      <point x="-95.625" y="215.0" />
+    </edge>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.django_admin_log" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser" relationship="REFERENCES">
+      <point x="-55.25" y="-105.0" />
+      <point x="739.1858974358975" y="461.0" />
+      <point x="588.1730769230769" y="461.0" />
+      <point x="95.625" y="215.0" />
+    </edge>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_grade" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_course" relationship="REFERENCES">
+      <point x="51.25" y="-61.0" />
+      <point x="195.75" y="733.0" />
+      <point x="210.0" y="733.0" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.auth_group_permissions" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.auth_permission" relationship="REFERENCES">
+      <point x="-60.5" y="-50.0" />
+      <point x="1113.75" y="733.0" />
+      <point x="1019.9358974358975" y="733.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_course" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser" relationship="REFERENCES">
+      <point x="0.0" y="-83.0" />
+      <point x="210.0" y="471.0" />
+      <point x="460.6730769230769" y="471.0" />
+      <point x="-31.875" y="215.0" />
+    </edge>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.django_admin_log" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="55.25" y="-105.0" />
+      <point x="849.6858974358975" y="471.0" />
+      <point x="941.8108974358975" y="471.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser_groups" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="80.5" y="-50.0" />
+      <point x="940.5" y="723.0" />
+      <point x="1211.4358974358975" y="723.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.auth_group_permissions" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="60.5" y="-50.0" />
+      <point x="1234.75" y="723.0" />
+      <point x="1211.4358974358975" y="723.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser_user_permissions" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser" relationship="REFERENCES">
+      <point x="-103.0" y="-50.0" />
+      <point x="370.0" y="733.0" />
+      <point x="538.4839743589744" y="733.0" />
+      <point x="538.4839743589744" y="471.0" />
+      <point x="597.7339743589744" y="471.0" />
+      <point x="597.7339743589744" y="451.0" />
+      <point x="524.4230769230769" y="451.0" />
+      <point x="31.875" y="215.0" />
+    </edge>
+    <edge source="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.auth_permission" target="28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="0.0" y="-61.0" />
+      <point x="1019.9358974358975" y="471.0" />
+      <point x="941.8108974358975" y="471.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.4491554018783932" showDependencies="false" x="954.7607266124419" y="567.7040051561178" />
+  <SelectedNodes>
+    <node>28aaacf6-1d89-4add-85f5-016e0872f2c9.TABLE:main.GradeSystem_customuser</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
