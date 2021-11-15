@@ -5,12 +5,18 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
 from .forms import CustomUserCreationForm, StudentGradingCreateForm
 from .models import Grade
+from django.urls import reverse_lazy
+from django.views import generic
+from django.contrib.auth.views import PasswordChangeView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
+from django.contrib.auth.forms import PasswordChangeForm, PasswordResetForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-
-class SignUpView(generic.CreateView):
-    form_class = CustomUserCreationForm
-    success_url = reverse_lazy('login')
-    template_name = 'signup.html'
+# from django.core.mail import send_mail
+# send_mail('Subject here', 'Here is the message.', 'from@example.com', ['to@example.com'], fail_silently=False)
+# class SignUpView(generic.CreateView):
+#     form_class = CustomUserCreationForm
+#     success_url = reverse_lazy('login')
+#     template_name = 'signup.html'
 
 
 class GradeListView(LoginRequiredMixin, ListView):
@@ -43,6 +49,14 @@ class StudentGradingCreateView(LoginRequiredMixin, CreateView):
         return kwargs
 
 
+
+class SignUpView(generic.CreateView):
+    form_class = CustomUserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'signup.html'
+
+
+
 class StudentGradingUpdateView(LoginRequiredMixin, UpdateView):
     model = Grade
     template_name = 'grade_edit.html'
@@ -54,3 +68,25 @@ class StudentGradingDeleteView(DeleteView):
     model = Grade
     template_name = 'grade_delete.html'
     success_url = reverse_lazy('grade_list')
+
+
+
+class ChangePwView(LoginRequiredMixin, PasswordChangeView):
+    form_class = PasswordChangeForm
+    success_url = reverse_lazy('home')
+    template_name = 'registration/change_pw.html'
+
+class PwResetView(PasswordResetView):
+    form_class = PasswordResetForm
+    success_url = reverse_lazy('pw_reset_done')
+    template_name = 'registration/pw_reset.html'
+
+class PwResetDoneView(PasswordResetDoneView):
+    template_name = 'registration/pw_reset_done.html'
+
+class PwResetConfirmView(PasswordResetConfirmView):
+    success_url = reverse_lazy('pw_reset_complete')
+    template_name = 'registration/pw_reset_confirm.html'
+
+class PwResetCompleteView(PasswordResetCompleteView):
+    template_name = 'registration/pw_reset_complete.html'

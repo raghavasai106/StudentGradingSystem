@@ -103,9 +103,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
-# Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = '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'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_FROM = 'raghavasai16@gmail.com'
+DEFAULT_FROM_EMAIL = 'raghavasai16@gmail.com'
+
 
 LANGUAGE_CODE = 'en-us'
 
@@ -129,5 +139,7 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+
 
 
