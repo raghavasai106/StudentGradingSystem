@@ -4,7 +4,7 @@ install python 3 and open in an IDE, I have used PyCharm Pro.
 Source venv/bin/activate
 (In Pycharm, it automatically launches the virtual environment when cloned).
 # Install requirements file containing Django and forms 
-python install -r requirements.txt
+pip install -r requirements.txt
 # To create DB
 python manage.py makemigrations
 python manage.py migrate
